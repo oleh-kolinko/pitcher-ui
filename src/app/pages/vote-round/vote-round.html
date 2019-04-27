@@ -1,4 +1,9 @@
-<div class="flex justify-center p-t-100 p-b-100">
+<div class="flex justify-end p-t-20 container">
+    <span class="p-r-15" style="cursor: pointer">VIEW PAST FINALISTS</span>
+    <span style="cursor: pointer">MY ACCOUNT</span>
+</div>
+<hr>
+<div class="flex justify-center p-t-70 p-b-100">
     <div>
         <img src="/assets/light.png" alt="">
     </div>
@@ -13,6 +18,13 @@
 </div>
 
 
+<div class="flex justify-center container">
+    <span style="color:#ccc">
+        <span style="text-decoration: underline; cursor: pointer">Make your ideas a reality.</span>
+        Next pitch deadline: June 1 2019
+    </span>
+</div>
+<hr class="p-b-40">
 
 <div class="flex flex-wrap justify-center ">
     <ng-container *ngFor="let pitch of pitchService.state.pitches">
