@@ -1,6 +1,15 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\app",
+    "\\src\\app\\pages",
+    "\\src\\app\\pages\\home",
+    "\\src\\app\\pages\\record-rtc",
+    "\\src\\app\\pages\\vote-round",
+    "\\src\\app\\pages\\vote-round\\vote-pitch",
+    "\\src\\app\\services"
   ],
+  "SelectedNode": "\\src\\app\\pages\\vote-round\\vote-pitch\\vote-pitch.ts",
   "PreviewInSolutionExplorer": false
 }
