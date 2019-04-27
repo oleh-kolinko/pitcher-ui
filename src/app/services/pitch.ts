@@ -26,9 +26,9 @@ export class PitchService {
     });
   }
 
-  createPitch(body: any): any {
+  createPitch(body: any, options: any = null): any {
     const url = apiUrl + '/pitches/add';
-    this.http.post(url, body).toPromise().then((data: any) => {
+    this.http.post(url, body, options).toPromise().then((data: any) => {
       console.log('pitch created');
     })
   }

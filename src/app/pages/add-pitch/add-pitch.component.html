@@ -27,6 +27,11 @@
           <input class="form-control" formControlName="tags" />
         </div>
 
+        <div class="form-group">
+          <label>Pitch Video</label>
+          <input type="file" (change)="fileChange($event)" placeholder="Upload file" accept=".webm, .mp4, .avi">
+        </div>
+
         <button class="btn btn-success btn-lg btn-block"(click)="createPitch()">Add</button>
 
       </form>

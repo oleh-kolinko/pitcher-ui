@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { PitchService } from '../../services/pitch';
 
@@ -10,6 +10,7 @@ import { PitchService } from '../../services/pitch';
 export class AddPitchComponent implements OnInit {
 
   public form: FormGroup;
+  public file: any;
 
   constructor(public formBuilder: FormBuilder, public pitchService: PitchService) { }
 
@@ -27,11 +28,34 @@ export class AddPitchComponent implements OnInit {
     })
   }
 
+  fileChange(event) {
+    let fileList: FileList = event.target.files;
+    if (fileList.length > 0) {
+      this.file = fileList[0];
+    }
+  }
+
   public createPitch(): void {
     let body = this.form.value;
     body.tags = body.tags.split(',').forEach(x => x = x.trim());
-    this.pitchService.createPitch(body);
+    let formData: FormData = new FormData();
+    formData.append('uploadFile', this.file, this.file.name);
+    let headers = new Headers();
+    /** In Angular 5, including the header Content-Type can invalidate your request */
+    headers.append('Content-Type', 'multipart/form-data');
+    headers.append('Accept', 'application/json');
+    let options = { headers: headers };
+    this.pitchService.createPitch(formData, options);
     this.form.reset();
+    //this.pitchService.createPitch(body, null);
+    //this.form.reset();
   }
+
+  public createPitchWithVideo(): void {
+      let fileList: FileList = event.target.files;
+      if (fileList.length > 0) {
+        let file: File = fileList[0];
+        
+      }
 
 }
