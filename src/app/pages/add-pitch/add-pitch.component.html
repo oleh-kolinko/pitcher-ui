@@ -1,32 +1,37 @@
+
 <div class="container-fluid">
-  <form [formGroup]="form">
-
-    <div class="form-group">
-      <label>Title</label>
-      <input formControlName="title" />
+  <div class="row">
+    <div class="col-md-8">
+      <app-record-rtc></app-record-rtc>
     </div>
+    <div class="col-md-4">
+      <form [formGroup]="form">
 
+        <div class="form-group">
+          <label>Title</label>
+          <input class="form-control" formControlName="title" />
+        </div>
 
+        <div class="form-group">
+          <label>Description</label>
+          <input class="form-control" formControlName="description" />
+        </div>
 
-    <div class="form-group">
-      <label>Description</label>
-      <input formControlName="description" />
+        <div class="form-group">
+          <label>Picture URL</label>
+          <input class="form-control" formControlName="titlePic" />
+        </div>
+
+        <div class="form-group">
+          <label>Tags</label>
+          <input class="form-control" formControlName="tags" />
+        </div>
+
+        <button class="btn btn-success btn-lg btn-block"(click)="createPitch()">Add</button>
+
+      </form>
     </div>
+  </div>
 
-    <div class="form-group">
-      <label>Picture URL</label>
-      <input formControlName="titlePic" />
-    </div>
-    
-
-    <div class="form-group">
-      <label>Tags</label>
-      <input formControlName="tags" />
-    </div>
-
-    <button (click)="createPitch()">Add</button>
-    
-
-  </form>
 
 </div>
