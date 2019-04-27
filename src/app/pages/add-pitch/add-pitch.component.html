@@ -1,10 +1,29 @@
 <div class="container-fluid">
-  <form formGroup="form">
+  <form [formGroup]="form">
 
-    <input formControlName="title" />
-    <input formControlName="titleDescription" />
-    <input formControlName="titlePic" />
-    <input formControlName="tags" />
+    <div class="form-group">
+      <label>Title</label>
+      <input formControlName="title" />
+    </div>
+
+
+
+    <div class="form-group">
+      <label>Description</label>
+      <input formControlName="description" />
+    </div>
+
+    <div class="form-group">
+      <label>Picture URL</label>
+      <input formControlName="titlePic" />
+    </div>
+    
+
+    <div class="form-group">
+      <label>Tags</label>
+      <input formControlName="tags" />
+    </div>
+    
 
   </form>
 

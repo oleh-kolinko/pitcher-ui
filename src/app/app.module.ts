@@ -13,7 +13,7 @@ import { UserService } from './services/user';
 import { VotePitchComponent } from './pages/vote-round/vote-pitch/vote-pitch';
 import { ButtonsModule } from 'ngx-bootstrap';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VoteFinalComponent } from './pages/finalists-round/vote-final/vote-final';
 import { HttpClientModule } from '@angular/common/http';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
@@ -47,6 +47,7 @@ import { AddPitchComponent } from './pages/add-pitch/add-pitch.component';
     FormsModule,
     HttpClientModule,
     CountdownModule,
+    ReactiveFormsModule
   ],
   providers: [
     PitchService,
