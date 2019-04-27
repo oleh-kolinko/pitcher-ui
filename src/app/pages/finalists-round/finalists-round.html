@@ -3,13 +3,13 @@
         <img class="m-b-25" src="/assets/1.png" width="60px">
 
         <span>TOTAL INVESTMENT</span>
-        <h5>$130,450</h5>
+        <h5>{{state.total | currency:'USD'}}</h5>
     </div>
     <div class="flex-col align-center justify-center col-4">
         <img class="m-b-10" src="/assets/2.png" width="60px">
 
         <span>INVESTORS</span>
-        <h5>345</h5>
+        <h5>{{state.investors}}</h5>
     </div>
     <div class="flex col-4 flex-col justify-center align-center">
         <img class="m-b-15" src="/assets/3.png" width="60px">
@@ -17,6 +17,10 @@
         <!-- <h5 class="m-b-0">5 days</h5> -->
         <countdown [config]="config" style="font-size: 1.3em"></countdown>
     </div>
+</div>
+
+<div class="flex justify-center m-t-15">
+        Each vote costs 10 USD. There is no limit to the number of votes cast.  The pitch with the most votes wins the entire investment.
 </div>
 
 <div class="flex flex-wrap justify-center ">

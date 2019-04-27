@@ -15,6 +15,11 @@ export class FinalistsRoundComponent {
     leftTime: 42234
   }
 
+  state = {
+    total: 26340,
+    investors: 131
+  }
+
   quantity = 1;
   stripe:any = null;
 
