@@ -20,7 +20,7 @@ export class PitchService {
 
   getPitches(): any{
     this.http.get(apiUrl + '/pitches').toPromise().then((data: any) => {
-      this.state.pitches = data.data;
+      this.state.pitches = data.data.sort((a,b)=>b.likes-a.likes);
       console.log(this.state.pitches);
       return this.state.pitches;
     });
