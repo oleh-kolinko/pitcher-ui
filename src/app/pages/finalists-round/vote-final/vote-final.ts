@@ -26,7 +26,7 @@ export class VoteFinalComponent {
         // Replace with the ID of your SKU
         {sku: 'sku_Exod7d0O2fMqas', quantity: quantity}
       ],
-      successUrl: 'http://localhost:4200/finalists/success/'+quantity,
+      successUrl: 'http://localhost:4200/success/'+quantity,
       cancelUrl: 'http://localhost:4200/',
       customerEmail: 'customer@example.com',
     }).then((result) => {

@@ -5,6 +5,7 @@ import { HomeComponent } from './pages/home/home';
 import { VoteRoundComponent } from './pages/vote-round/vote-round';
 import { FinalistsRoundComponent } from './pages/finalists-round/finalists-round';
 import { WinnerComponent } from './pages/winner/winner';
+import { ThankYouComponent } from './pages/thank-you/thank-you';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home',  pathMatch: 'full'},
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'vote', component: VoteRoundComponent },
   { path: 'finalists', component: FinalistsRoundComponent },
   { path: 'finalists/success/:quantity', component: FinalistsRoundComponent},
+  { path: 'success/:quantity', component: ThankYouComponent },
   { path: 'winner', component: WinnerComponent },
 
   // { path: 'pitch/:id',      component: HeroDetailComponent },

@@ -21,6 +21,7 @@ import { CountdownModule } from 'ngx-countdown';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 import { RecordRtcComponent } from './pages/record-rtc/record-rtc.component';
+import { ThankYouComponent } from './pages/thank-you/thank-you';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RecordRtcComponent } from './pages/record-rtc/record-rtc.component';
     VoteRoundComponent,
     VotePitchComponent,
     VoteFinalComponent,
-    RecordRtcComponent
+    RecordRtcComponent,
+    ThankYouComponent
   ],
   imports: [
     ButtonsModule.forRoot(),
