@@ -12,8 +12,6 @@ export class VotePitchComponent {
 
   constructor(public socketService: SocketsService, public pitchService: PitchService) { }
 
-
-
   public vote(id: number): void {
     let upvoted = this.pitchService.votes.some(x => x === id);
     if (!upvoted) {
@@ -23,7 +21,7 @@ export class VotePitchComponent {
       });
     }
     else {
-      this.pitchService.votes = this.pitchService.votes.filter(x => x === id);
+      this.pitchService.votes = this.pitchService.votes.filter(x => x !== id);
       this.socketService.sendMessage('dislike', {
         id: id
       });
