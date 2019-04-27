@@ -16,6 +16,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { VoteFinalComponent } from './pages/finalists-round/vote-final/vote-final';
 import { HttpClientModule } from '@angular/common/http';
+import { RecordRtcComponent } from './pages/record-rtc/record-rtc.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     FinalistsRoundComponent,
     VoteRoundComponent,
     VotePitchComponent,
-    VoteFinalComponent
+    VoteFinalComponent,
+    RecordRtcComponent
   ],
   imports: [
     ButtonsModule.forRoot(),
