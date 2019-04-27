@@ -1,15 +1,20 @@
 <div class="card" style="height: 500px;width: 18rem">
-    <div style="height: 300px;" class="flex align-center padding-15">
+    <div style="height: 300px;" class="flex align-center padding-80">
         <img [src]="pitch.titlePic" class="card-img-top">
     </div>
     <div style="height: 100px;" class="card-body flex flex-column justify-between">
-        <span>
+        <div>
 
             <h5 class="card-title">{{pitch.title}}</h5>
             <p class="card-text">{{pitch.description}}</p>
-        </span>
-        <button type="button" class="btn btn-primary align-self-end">
-            Vote 👍
-        </button>
+        </div>
+        <div class=" flex justify-between align-center">
+            <span>
+                {{pitch.likes}} 👍
+            </span>
+            <button type="button" class="btn btn-dark ">
+                Vote +1 👍
+            </button>
+        </div>
     </div>
 </div>

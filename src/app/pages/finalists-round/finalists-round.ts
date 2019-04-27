@@ -10,6 +10,11 @@ import { PitchService } from 'src/app/services/pitch';
 })
 export class FinalistsRoundComponent {
 
+  config = {
+    template: `$!h!h $!m!m  $!s!s `,
+    leftTime: 42234
+  }
+
   quantity = 1;
   stripe:any = null;
 

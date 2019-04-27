@@ -1,16 +1,27 @@
-<!-- <div class="container"> -->
-    <div class="row col-6 flex align-center">
-        <input class="form-control col-3" type="number" [(ngModel)]="quantity" id="example-number-input">
-        <span class="m-l-15 m-r-15 col-3">x $10.00</span>
-        <button class="btn btn-primary col-5" (click)="onBuy(quantity)">
-            BUY
-        </button>
-    </div>
+<div class="flex justify-between p-l-80 p-r-80 p-t-40">
+    <div class="flex-col align-center justify-center col-4">
+        <img class="m-b-25" src="/assets/1.png" width="60px">
 
-    <div class="flex flex-wrap justify-center ">
-        <ng-container *ngFor="let pitch of pitchService.state.pitches">
-            <vote-final [pitch]="pitch" class="padding-15">
-            </vote-final>
-        </ng-container>
+        <span>TOTAL INVESTMENT</span>
+        <h5>$130,450</h5>
     </div>
-<!-- </div> -->
+    <div class="flex-col align-center justify-center col-4">
+        <img class="m-b-10" src="/assets/2.png" width="60px">
+
+        <span>INVESTORS</span>
+        <h5>345</h5>
+    </div>
+    <div class="flex col-4 flex-col justify-center align-center">
+        <img class="m-b-15" src="/assets/3.png" width="60px">
+        <span>TIME LEFT</span>
+        <!-- <h5 class="m-b-0">5 days</h5> -->
+        <countdown [config]="config" style="font-size: 1.3em"></countdown>
+    </div>
+</div>
+
+<div class="flex flex-wrap justify-center ">
+    <ng-container *ngFor="let pitch of pitchService.state.pitches">
+        <vote-final [pitch]="pitch" class="padding-15">
+        </vote-final>
+    </ng-container>
+</div>

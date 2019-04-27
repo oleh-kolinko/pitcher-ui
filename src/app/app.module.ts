@@ -17,9 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { VoteFinalComponent } from './pages/finalists-round/vote-final/vote-final';
 import { HttpClientModule } from '@angular/common/http';
 import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import { CountdownModule } from 'ngx-countdown';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
-(window as any).global = window;
 
 @NgModule({
   declarations: [
@@ -39,7 +39,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     AppRoutingModule,
     CommonModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    CountdownModule,
   ],
   providers: [
     PitchService,

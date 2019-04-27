@@ -1,9 +1,22 @@
-<!-- <div class="container"> -->
-
-    <div class="flex flex-wrap justify-center " >
-        <ng-container *ngFor="let pitch of pitchService.state.pitches">
-            <vote-pitch [pitch]="pitch" class="padding-15" >
-            </vote-pitch>
-        </ng-container>
+<div class="flex justify-center p-t-50 p-b-50">
+    <div>
+        <img src="/assets/light.png" alt="">
     </div>
-<!-- </div> -->
+
+    <div class="flex flex-col justify-center align-center ">
+        <h2>BE PART OF THE NEXT BIG IDEA</h2>
+        <h4>Keep.At.It is a global micro investment platform</h4>
+
+        <p>Vote for the best product or business</p>
+        <p>Invest as little as $10 to share in the winning pitch</p>
+    </div>
+</div>
+
+
+
+<div class="flex flex-wrap justify-center ">
+    <ng-container *ngFor="let pitch of pitchService.state.pitches">
+        <vote-pitch [pitch]="pitch" class="padding-15">
+        </vote-pitch>
+    </ng-container>
+</div>
