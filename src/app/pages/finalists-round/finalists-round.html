@@ -1,0 +1,16 @@
+<!-- <div class="container"> -->
+    <div class="row col-6 flex align-center">
+        <input class="form-control col-3" type="number" [(ngModel)]="quantity" id="example-number-input">
+        <span class="m-l-15 m-r-15 col-3">x $10.00</span>
+        <button class="btn btn-primary col-5" (click)="onBuy(quantity)">
+            BUY
+        </button>
+    </div>
+
+    <div class="flex flex-wrap justify-center ">
+        <ng-container *ngFor="let pitch of pitchService.state.pitches">
+            <vote-final [pitch]="pitch" class="padding-15">
+            </vote-final>
+        </ng-container>
+    </div>
+<!-- </div> -->

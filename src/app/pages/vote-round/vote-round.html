@@ -1,0 +1,9 @@
+<!-- <div class="container"> -->
+
+    <div class="flex flex-wrap justify-center " >
+        <ng-container *ngFor="let pitch of pitchService.state.pitches">
+            <vote-pitch [pitch]="pitch" class="padding-15" >
+            </vote-pitch>
+        </ng-container>
+    </div>
+<!-- </div> -->
