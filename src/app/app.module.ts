@@ -16,6 +16,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { VoteFinalComponent } from './pages/finalists-round/vote-final/vote-final';
 import { HttpClientModule } from '@angular/common/http';
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+
+const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
 
 @NgModule({
   declarations: [
@@ -30,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   imports: [
     ButtonsModule.forRoot(),
+    SocketIoModule.forRoot(config),
     BrowserModule,
     AppRoutingModule,
     CommonModule,
