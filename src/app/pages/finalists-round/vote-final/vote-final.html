@@ -1,10 +1,10 @@
-<div class="card" style="height: 500px;width: 18rem">
-    <div style="height: 300px;" class="flex align-center padding-15">
-        <img [src]="pitch.titlePic" class="card-img-top">
+<div class="card" style="height: 500px;width: 36rem">
+    <div style="height: 300px;" class="flex align-center padding-15 p-t-40">
+        <!-- <img [src]="pitch.titlePic" class="card-img-top"> -->
+        <video [src]="pitch.videoUrl" width="100%" controls="controls"> </video>
     </div>
     <div style="height: 100px;" class="card-body flex flex-column justify-between">
         <span>
-
             <h5 class="card-title">{{pitch.title}}</h5>
             <p class="card-text">{{pitch.description}}</p>
         </span>
@@ -14,11 +14,11 @@
             
         </button> -->
 
-        <div class="row flex justify-between p-r-15 p-l-15 align-center">
-            <input class="form-control col-4" type="number" min="0" [(ngModel)]="quantity" id="example-number-input">
-            <!-- <span class="m-l-15 m-r-15 col-3">x $10.00</span> -->
+        <div class="row flex p-r-15 p-l-15 align-center">
+            <input class="form-control col-2" type="number" min="0" [(ngModel)]="quantity" id="example-number-input">
+            <span class="col-5">Votes</span>
             <button class="btn btn-dark col-5" (click)="onBuy(quantity)">
-                Invest 💰
+                Purchase 💰
             </button>
         </div>
     </div>

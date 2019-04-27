@@ -63,5 +63,23 @@ export const state = {
             likes: 4,
             titlePic: "/assets/logos/1.png"
         },
+    ],
+    finalists: [
+        {
+            title: "KEEP.AT.IT",
+            description: "Innovative crowdsourcing investment platform",
+            tags: ["tech", "investing"],
+            likes: 27,
+            titlePic: "/assets/logos/6.png",
+            videoUrl: "/assets/videos/2.MOV",
+        },
+        {
+            title: "BOATSHOW",
+            description: "Find people to date in the yachting industry",
+            tags: ["dating", "social networking"],
+            likes: 4,
+            titlePic: "/assets/logos/1.png",
+            videoUrl: "/assets/videos/1.MOV",
+        },
     ]
 }

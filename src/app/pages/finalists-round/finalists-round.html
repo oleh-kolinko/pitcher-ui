@@ -20,7 +20,7 @@
 </div>
 
 <div class="flex flex-wrap justify-center ">
-    <ng-container *ngFor="let pitch of pitchService.state.pitches">
+    <ng-container *ngFor="let pitch of pitchService.state.finalists">
         <vote-final [pitch]="pitch" class="padding-15">
         </vote-final>
     </ng-container>
