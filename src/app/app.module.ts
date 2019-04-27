@@ -20,6 +20,7 @@ import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
 import { CountdownModule } from 'ngx-countdown';
 
 const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
+import { RecordRtcComponent } from './pages/record-rtc/record-rtc.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ const config: SocketIoConfig = { url: 'http://localhost:3000', options: {} };
     FinalistsRoundComponent,
     VoteRoundComponent,
     VotePitchComponent,
-    VoteFinalComponent
+    VoteFinalComponent,
+    RecordRtcComponent
   ],
   imports: [
     ButtonsModule.forRoot(),
