@@ -31,6 +31,7 @@ export class AddPitchComponent implements OnInit {
     let body = this.form.value;
     body.tags = body.tags.split(',').forEach(x => x = x.trim());
     this.pitchService.createPitch(body);
+    this.form.reset();
   }
 
 }
